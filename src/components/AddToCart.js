@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaCheck } from 'react-icons/fa'
-import { useCartContext } from '../context/cart_context'
+// import { useCartContext } from '../context/cart_context's
 import AmountButtons from './AmountButtons'
 
 const AddToCart = ({ product }) => {
@@ -58,7 +58,7 @@ const AddToCart = ({ product }) => {
         <Link
           to='/cart'
           className='btn'
-          onClick={() => addToCart(id, mainColor, amount, product)}
+        // onClick={() => addToCart(id, mainColor, amount, product)}
         >
           add to cart
         </Link>
