@@ -7,13 +7,23 @@ import { FilterProvider } from './context/filter_context'
 import { CartProvider } from './context/cart_context'
 import { UserProvider } from './context/user_context'
 import { Auth0Provider } from '@auth0/auth0-react'
-
+// ullas.us.auth0.com
+//Kk8haB5bJCefszJzSov9kdaEJcjEHXio
 ReactDOM.render(
- <ProductsProvider>
-  <FilterProvider>
-   <CartProvider>
-    <App />
-   </CartProvider>
-  </FilterProvider>
- </ProductsProvider>
+ <Auth0Provider
+  domain="ullas.us.auth0.com"
+  clientId="Kk8haB5bJCefszJzSov9kdaEJcjEHXio"
+  redirectUri={window.location.origin}
+  cacheLocation='localstorage'
+ >
+  <UserProvider>
+   <ProductsProvider>
+    <FilterProvider>
+     <CartProvider>
+      <App />
+     </CartProvider>
+    </FilterProvider>
+   </ProductsProvider>
+  </UserProvider>
+ </Auth0Provider>
  , document.getElementById('root'))
