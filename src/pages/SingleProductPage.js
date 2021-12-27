@@ -44,7 +44,6 @@ const SingleProductPage = () => {
     return <Error />
   }
 
-
   const {
     name,
     price,
@@ -56,7 +55,6 @@ const SingleProductPage = () => {
     company,
     images,
   } = product
-
 
   return (
     <Wrapper>
